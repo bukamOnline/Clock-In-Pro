@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TimeTrack Pro - Your All-in-One Work Hours Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="TimeTrack Pro - Track work hours, overtime, taxes, and deductions with a beautiful and multilingual app tailored for professionals.">
+
+  <!-- Tailwind CSS 2.2.19 -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Google Fonts: Inter -->
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@3.3.1/index.min.css" rel="stylesheet">
+  <!-- Font Awesome 6.5.2 -->
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" rel="stylesheet">
+  <!-- Chart.js 4.4.3 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif !important; }
+    .feature-card {
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .feature-card:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(31,41,55,0.10);
+    }
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeInUp 0.9s forwards;
+    }
+    .fade-in-delay-1 { animation-delay: 0.2s; }
+    .fade-in-delay-2 { animation-delay: 0.4s; }
+    .fade-in-delay-3 { animation-delay: 0.6s; }
+    .fade-in-delay-4 { animation-delay: 0.8s; }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: none; }
+    }
+    /* Remove scrollbars on gallery for PDF export compatibility */
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    /* Cards visiblity for PDF */
+    .feature-card, .usecase-card { page-break-inside: avoid; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <!-- Header / Hero -->
+  <header class="bg-gradient-to-br from-teal-500 to-blue-600 text-white py-16 px-4">
+    <div class="max-w-5xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between">
+      <div class="md:w-1/2 mt-8 md:mt-0 fade-in-up">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">TimeTrack Pro</h1>
+        <p class="text-lg mb-6 md:mb-8">Effortlessly track work hours, calculate overtime, and manage deductions — all in one beautiful, multilingual, mobile-ready app.</p>
+        <ul class="flex flex-wrap text-lg font-medium space-x-5 space-y-2 mb-6">
+          <li class="inline-flex items-center fade-in-up fade-in-delay-1"><i class="fa-solid fa-stopwatch mr-2"></i>Real-time Tracking</li>
+          <li class="inline-flex items-center fade-in-up fade-in-delay-2"><i class="fa-solid fa-language mr-2"></i>5 Languages</li>
+          <li class="inline-flex items-center fade-in-up fade-in-delay-3"><i class="fa-solid fa-mobile-screen mr-2"></i>Android Ready</li>
+          <li class="inline-flex items-center fade-in-up fade-in-delay-4"><i class="fa-solid fa-chart-simple mr-2"></i>Insights & Charts</li>
+        </ul>
+        <a href="#features" class="inline-block bg-white text-blue-600 px-7 py-3 rounded-lg shadow font-bold hover:bg-gray-100 transition">Discover Features</a>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <video class="rounded-3xl shadow-lg max-w-xs md:max-w-sm lg:max-w-md border-4 border-white"
+          controls playsinline webkit-playsinline poster="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80">
+           <source src="https://assets.mixkit.co/videos/preview/mixkit-timelapse-of-city-traffic-at-sunset-1289-large.mp4" type="video/mp4">
+           Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section id="features" class="max-w-5xl mx-auto py-14 px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">Key Features</h2>
+    <div class="grid gap-7 md:grid-cols-3">
+
+      <div class="feature-card bg-white rounded-2xl shadow-md p-7 fade-in-up fade-in-delay-1">
+        <div class="flex items-center mb-4 text-blue-600 text-3xl"><i class="fa-solid fa-clock mr-3"></i>Time Tracking</div>
+        <ul class="list-disc ml-6">
+          <li>Clock in/out with pause support</li>
+          <li>See your break details</li>
+          <li>Edit or delete any entry easily</li>
+        </ul>
+      </div>
+      <div class="feature-card bg-white rounded-2xl shadow-md p-7 fade-in-up fade-in-delay-2">
+        <div class="flex items-center mb-4 text-teal-500 text-3xl"><i class="fa-solid fa-business-time mr-3"></i>Overtime Handling</div>
+        <ul class="list-disc ml-6">
+          <li>Automatic overtime detection</li>
+          <li>Customize overtime rules</li>
+          <li>Clear weekly/monthly analytics</li>
+        </ul>
+      </div>
+      <div class="feature-card bg-white rounded-2xl shadow-md p-7 fade-in-up fade-in-delay-3">
+        <div class="flex items-center mb-4 text-yellow-500 text-3xl"><i class="fa-solid fa-sack-dollar mr-3"></i>Deductions</div>
+        <ul class="list-disc ml-6">
+          <li>Configure tax and custom deductions</li>
+          <li>Accurate net earnings calculation</li>
+          <li>Easy deduction management</li>
+        </ul>
+      </div>
+      <div class="feature-card bg-white rounded-2xl shadow-md p-7 fade-in-up fade-in-delay-3">
+        <div class="flex items-center mb-4 text-purple-500 text-3xl"><i class="fa-solid fa-globe mr-3"></i>Multilingual</div>
+        <ul class="list-disc ml-6">
+          <li>Supports English, Spanish, French, Hindi, German</li>
+          <li>Switch language any time</li>
+          <li>Localized numbers and currency</li>
+        </ul>
+      </div>
+      <div class="feature-card bg-white rounded-2xl shadow-md p-7 fade-in-up fade-in-delay-4">
+        <div class="flex items-center mb-4 text-green-500 text-3xl"><i class="fa-solid fa-database mr-3"></i>Secure, Private Storage</div>
+        <ul class="list-disc ml-6">
+          <li>All data local on your device (IndexedDB)</li>
+          <li>No account required, fully offline</li>
+          <li>Backup & restore easily</li>
+        </ul>
+      </div>
+      <div class="feature-card bg-white rounded-2xl shadow-md p-7 fade-in-up fade-in-delay-2">
+        <div class="flex items-center mb-4 text-pink-500 text-3xl"><i class="fa-solid fa-chart-pie mr-3"></i>Data Visualization</div>
+        <ul class="list-disc ml-6">
+          <li>Interactive charts for work and overtime</li>
+          <li>Mobile-optimized graphs</li>
+          <li>Export your reports</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Comparison Table -->
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h2 class="text-2xl font-bold text-center mb-8">How does TimeTrack Pro compare?</h2>
+    <div class="overflow-x-auto">
+      <table class="min-w-full table-auto bg-white rounded-2xl shadow text-sm md:text-base">
+        <thead>
+          <tr class="bg-blue-100 text-blue-800">
+            <th class="px-4 py-3 font-semibold text-left">Feature</th>
+            <th class="px-4 py-3 font-semibold">TimeTrack Pro</th>
+            <th class="px-4 py-3 font-semibold">Spreadsheet</th>
+            <th class="px-4 py-3 font-semibold">Basic Timer App</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t">
+            <td class="px-4 py-3">Overtime Calculation</td>
+            <td class="px-4 py-3 text-green-600 font-bold text-center"><i class="fa-solid fa-circle-check"></i></td>
+            <td class="px-4 py-3 text-center"><i class="fa-solid fa-circle-exclamation text-yellow-500"></i></td>
+            <td class="px-4 py-3 text-center text-red-400"><i class="fa-solid fa-circle-xmark"></i></td>
+          </tr>
+          <tr class="border-t">
+            <td class="px-4 py-3">Tax/Deduction Handling</td>
+            <td class="px-4 py-3 text-green-600 font-bold text-center"><i class="fa-solid fa-circle-check"></i></td>
+            <td class="px-4 py-3 text-center"><i class="fa-solid fa-circle-xmark text-red-400"></i></td>
+            <td class="px-4 py-3 text-center text-red-400"><i class="fa-solid fa-circle-xmark"></i></td>
+          </tr>
+          <tr class="border-t">
+            <td class="px-4 py-3">Break/Pause Tracking</td>
+            <td class="px-4 py-3 text-green-600 font-bold text-center"><i class="fa-solid fa-circle-check"></i></td>
+            <td class="px-4 py-3 text-center"><i class="fa-solid fa-circle-xmark text-red-400"></i></td>
+            <td class="px-4 py-3 text-center"><i class="fa-solid fa-circle-exclamation text-yellow-500"></i></td>
+          </tr>
+          <tr class="border-t">
+            <td class="px-4 py-3">Mobile Experience</td>
+            <td class="px-4 py-3 text-green-600 font-bold text-center"><i class="fa-solid fa-circle-check"></i></td>
+            <td class="px-4 py-3 text-center"><i class="fa-solid fa-circle-xmark text-red-400"></i></td>
+            <td class="px-4 py-3 text-center"><i class="fa-solid fa-circle-exclamation text-yellow-500"></i></td>
+          </tr>
+          <tr class="border-t">
+            <td class="px-4 py-3">Multilingual Support</td>
+            <td class="px-4 py-3 text-green-600 font-bold text-center"><i class="fa-solid fa-circle-check"></i></td>
+            <td class="px-4 py-3 text-center"><i class="fa-solid fa-circle-xmark text-red-400"></i></td>
+            <td class="px-4 py-3 text-center"><i class="fa-solid fa-circle-xmark text-red-400"></i></td>
+          </tr>
+          <tr class="border-t">
+            <td class="px-4 py-3">Visual Analytics</td>
+            <td class="px-4 py-3 text-green-600 font-bold text-center"><i class="fa-solid fa-circle-check"></i></td>
+            <td class="px-4 py-3 text-center"><i class="fa-solid fa-circle-xmark text-red-400"></i></td>
+            <td class="px-4 py-3 text-center"><i class="fa-solid fa-circle-xmark text-red-400"></i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section class="max-w-5xl mx-auto py-14 px-4">
+    <h2 class="text-3xl font-bold text-center mb-10">Perfect For Every Professional</h2>
+    <div class="grid gap-7 sm:grid-cols-2 md:grid-cols-3">
+      <div class="usecase-card bg-white rounded-2xl p-6 shadow flex flex-col items-center text-center">
+        <i class="fa-solid fa-stethoscope text-3xl text-blue-600 mb-3"></i>
+        <div class="font-semibold mb-1">Healthcare Workers</div>
+        <div class="text-sm text-gray-600">Track unpredictable shift patterns and overtime effortlessly.</div>
+      </div>
+      <div class="usecase-card bg-white rounded-2xl p-6 shadow flex flex-col items-center text-center">
+        <i class="fa-solid fa-briefcase text-3xl text-teal-600 mb-3"></i>
+        <div class="font-semibold mb-1">Consultants</div>
+        <div class="text-sm text-gray-600">Bill clients accurately by exporting time reports with deductions handled.</div>
+      </div>
+      <div class="usecase-card bg-white rounded-2xl p-6 shadow flex flex-col items-center text-center">
+        <i class="fa-solid fa-truck text-3xl text-purple-600 mb-3"></i>
+        <div class="font-semibold mb-1">Drivers & Shift Workers</div>
+        <div class="text-sm text-gray-600">Visualize long work weeks and easily manage lunch or rest breaks.</div>
+      </div>
+      <div class="usecase-card bg-white rounded-2xl p-6 shadow flex flex-col items-center text-center">
+        <i class="fa-solid fa-graduation-cap text-3xl text-green-600 mb-3"></i>
+        <div class="font-semibold mb-1">Students & Interns</div>
+        <div class="text-sm text-gray-600">Stay compliant with part-time work limits, in your own language.</div>
+      </div>
+      <div class="usecase-card bg-white rounded-2xl p-6 shadow flex flex-col items-center text-center">
+        <i class="fa-solid fa-store text-3xl text-pink-600 mb-3"></i>
+        <div class="font-semibold mb-1">Retail & Hospitality</div>
+        <div class="text-sm text-gray-600">Get clear insights into variable hours, overtime, and take-home pay.</div>
+      </div>
+      <div class="usecase-card bg-white rounded-2xl p-6 shadow flex flex-col items-center text-center">
+        <i class="fa-solid fa-users text-3xl text-yellow-600 mb-3"></i>
+        <div class="font-semibold mb-1">Teams & Startups</div>
+        <div class="text-sm text-gray-600">All team members can track hours and create reports from their phones.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Animated Chart Section -->
+  <section class="max-w-4xl mx-auto py-14 px-4">
+    <h2 class="text-2xl font-bold text-center mb-7">Visualize Your Work</h2>
+    <div class="bg-white rounded-xl shadow p-8 flex flex-col md:flex-row items-center">
+      <div class="md:w-7/12 mb-8 md:mb-0">
+        <canvas id="workChart" width="400" height="220"></canvas>
+      </div>
+      <div class="md:w-5/12 md:pl-10">
+        <ul class="text-gray-700 text-base space-y-2">
+          <li><i class="fa-solid fa-circle text-blue-500 mr-3"></i><span class="font-semibold">Regular Hours</span> vs. <span class="text-yellow-500 font-semibold">Overtime</span></li>
+          <li>Spot busy weeks and optimize your schedule</li>
+          <li>Export data for invoices or records</li>
+          <li>Charts are responsive and mobile-friendly</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        var ctx = document.getElementById('workChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            datasets: [{
+              label: 'Regular Hours',
+              data: [8, 8, 8, 9, 7, 4, 0],
+              backgroundColor: 'rgba(59, 130, 246, 0.67)'
+            }, {
+              label: 'Overtime',
+              data: [0, 0, 1, 2, 0, 0, 0],
+              backgroundColor: 'rgba(234, 179, 8, 0.75)'
+            }]
+          },
+          options: {
+            plugins: {
+              legend: { position: 'top', labels: { font: { family: 'Inter' } } },
+              tooltip: { enabled: true }
+            },
+            responsive: true,
+            scales: {
+              x: { stacked: true, ticks: { font: { family: 'Inter' } } },
+              y: { stacked: true, ticks: { beginAtZero: true, max: 12, font: { family: 'Inter' }} }
+            }
+          }
+        });
+      });
+    </script>
+  </section>
+
+  <!-- Multilingual & Mobile Section -->
+  <section class="max-w-4xl mx-auto py-14 px-4 bg-gradient-to-br from-blue-50 to-teal-50 rounded-3xl shadow mb-14">
+    <h2 class="text-2xl font-bold text-center mb-8">Multilingual & Mobile Experience</h2>
+    <div class="flex flex-col md:flex-row md:space-x-10 items-center">
+      <ul class="flex flex-wrap justify-center space-x-8 space-y-2 mb-8 md:mb-0 md:w-1/2">
+        <li class="flex items-center text-lg">
+          <span class="text-blue-600 text-2xl mr-3"><i class="fa-solid fa-flag-usa"></i></span>English (EN)
+        </li>
+        <li class="flex items-center text-lg">
+          <span class="text-red-500 text-2xl mr-3"><i class="fa-solid fa-flag"></i></span>Español (ES)
+        </li>
+        <li class="flex items-center text-lg">
+          <span class="text-blue-500 text-2xl mr-3"><i class="fa-solid fa-flag"></i></span>Français (FR)
+        </li>
+        <li class="flex items-center text-lg">
+          <span class="text-orange-700 text-2xl mr-3"><i class="fa-solid fa-flag"></i></span>हिन्दी (HI)
+        </li>
+        <li class="flex items-center text-lg">
+          <span class="text-black text-2xl mr-3"><i class="fa-solid fa-flag"></i></span>Deutsch (DE)
+        </li>
+      </ul>
+      <div class="md:w-1/2 flex items-center pt-6 md:pt-0 justify-center">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=300&q=80" alt="Mobile App Screenshot"
+            class="rounded-2xl shadow-lg border-2 border-blue-200 w-52 h-96 object-cover mr-4">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=300&q=80" alt="Tablet App Screenshot"
+            class="rounded-2xl shadow-lg border-2 border-teal-200 w-32 h-64 object-cover hidden md:block">
+      </div>
+    </div>
+    <div class="flex justify-center mt-8 font-medium text-gray-700">
+      <span class="inline-flex items-center bg-white px-5 py-2 rounded-lg shadow border border-blue-200">
+        <i class="fa-solid fa-mobile-screen-button text-blue-600 mr-2"></i>
+        Switch devices & languages anytime!
+      </span>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="max-w-4xl mx-auto py-14 px-4">
+    <h2 class="text-2xl font-bold text-center mb-10">How It Works</h2>
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="bg-white rounded-2xl p-7 shadow text-center flex flex-col items-center fade-in-up fade-in-delay-1">
+        <span class="text-4xl text-blue-600 mb-3"><i class="fa-solid fa-user-plus"></i></span>
+        <div class="font-semibold mb-1">1. Set Up</div>
+        <div class="text-sm text-gray-600">No signup needed. Personalize your language, work, pay, and tax settings instantly.</div>
+      </div>
+      <div class="bg-white rounded-2xl p-7 shadow text-center flex flex-col items-center fade-in-up fade-in-delay-2">
+        <span class="text-4xl text-teal-600 mb-3"><i class="fa-solid fa-stopwatch"></i></span>
+        <div class="font-semibold mb-1">2. Start The Clock</div>
+        <div class="text-sm text-gray-600">Simply clock in, tap pause for breaks, and clock out—all from your phone.</div>
+      </div>
+      <div class="bg-white rounded-2xl p-7 shadow text-center flex flex-col items-center fade-in-up fade-in-delay-3">
+        <span class="text-4xl text-yellow-600 mb-3"><i class="fa-solid fa-pen-to-square"></i></span>
+        <div class="font-semibold mb-1">3. Manage Entries</div>
+        <div class="text-sm text-gray-600">Edit, correct, or delete time entries as needed. Review overtime and break details.</div>
+      </div>
+      <div class="bg-white rounded-2xl p-7 shadow text-center flex flex-col items-center fade-in-up fade-in-delay-4">
+        <span class="text-4xl text-purple-600 mb-3"><i class="fa-solid fa-file-invoice"></i></span>
+        <div class="font-semibold mb-1">4. View & Export</div>
+        <div class="text-sm text-gray-600">See beautiful graphs, summaries, and export your reports for payroll or invoicing.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="max-w-3xl mx-auto py-14 px-4">
+    <h2 class="text-2xl font-bold text-center mb-10">Frequently Asked Questions</h2>
+    <div>
+      <div class="bg-white rounded-lg shadow mb-5 p-6">
+        <h3 class="flex items-center font-semibold text-lg text-blue-600 mb-2"><i class="fa-solid fa-lock mr-3"></i>Is my data private?</h3>
+        <p class="text-gray-700 text-base">Absolutely! All your information stays only on your device using IndexedDB. <span class="font-medium">No account, no cloud needed</span>. You control your data 100%.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow mb-5 p-6">
+        <h3 class="flex items-center font-semibold text-lg text-blue-600 mb-2"><i class="fa-solid fa-language mr-3"></i>Can I change language at any time?</h3>
+        <p class="text-gray-700 text-base">Yes! Instantly switch between English, Spanish, French, Hindi, or German with zero hassle.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow mb-5 p-6">
+        <h3 class="flex items-center font-semibold text-lg text-blue-600 mb-2"><i class="fa-solid fa-mobile-screen-button mr-3"></i>Will it work on my Android phone?</h3>
+        <p class="text-gray-700 text-base">100%! TimeTrack Pro is fully optimized for Android devices and can be easily packaged as an app, with native-like experience.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow mb-5 p-6">
+        <h3 class="flex items-center font-semibold text-lg text-blue-600 mb-2"><i class="fa-solid fa-chart-simple mr-3"></i>Can I use it without the internet?</h3>
+        <p class="text-gray-700 text-base">Yes, all features work offline. Internet is only ever needed for backups or if you choose cloud export.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6">
+        <h3 class="flex items-center font-semibold text-lg text-blue-600 mb-2"><i class="fa-solid fa-wallet mr-3"></i>Can I track multiple jobs?</h3>
+        <p class="text-gray-700 text-base">Yes! Add work profiles for separate jobs, switch effortlessly, and view separate analytics for each.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Footer -->
+  <footer class="bg-gradient-to-r from-teal-500 to-blue-600 text-white pt-12 pb-8 px-4">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:justify-between">
+      <div class="mb-8 md:mb-0">
+        <h3 class="text-2xl font-bold mb-2">Ready to own your time?</h3>
+        <p class="text-lg">Start tracking your work hours with <span class="font-bold">TimeTrack Pro</span> for better pay and life balance.</p>
+      </div>
+      <a href="#" class="mt-6 md:mt-0 bg-white text-blue-700 font-bold px-8 py-4 rounded-xl shadow hover:bg-gray-100 transition text-lg flex items-center">
+        <i class="fa-solid fa-download mr-3"></i> Get Started Now
+      </a>
+    </div>
+    <div class="text-center text-blue-100 text-sm mt-8">
+      &copy; 2024 TimeTrack Pro. All rights reserved. | Need help? <a href="mailto:support@timetrackpro.com" class="underline">Contact Support</a>
+    </div>
+  </footer>
+
+</body>
+</html>
