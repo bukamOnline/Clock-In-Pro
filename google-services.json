@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "261020060659",
+    "project_id": "clock-in-pro-9d849",
+    "storage_bucket": "clock-in-pro-9d849.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261020060659:android:47e278e37e72df06fa2086",
+        "android_client_info": {
+          "package_name": "com.nocturnaldevs.hourstracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVQbwp5G-r3MWPcvSWJTsq_t-y1nJYf-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
